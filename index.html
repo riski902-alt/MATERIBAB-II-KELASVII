@@ -15,9 +15,9 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            /* Latar belakang cerah dipertahankan agar tombol gelap terlihat menonjol */
-            background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 50%, #f0f7f4 100%);
-            color: #1a2b4c;
+            /* Latar belakang disesuaikan dengan warna Index 2 */
+            background-color: #4A7298; 
+            color: #ffffff;
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
@@ -31,21 +31,24 @@
             hyphens: auto;
         }
 
-        /* Desain Kartu / Tombol Gelap */
+        /* Desain Kartu / Tombol Disesuaikan dengan Index 2 */
         .card-btn {
             position: relative;
             overflow: hidden; 
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background-color: #1E3A5F; /* Warna Navy Index 2 */
+            border: 3px solid #88D4AB; /* Border Hijau Index 2 */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            color: white;
         }
 
         /* Efek Hover Tombol */
         .card-btn:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            border-color: #A3E4C2;
+            background-color: #23436b;
         }
 
         /* Efek Click Tombol (Press) */
@@ -62,7 +65,7 @@
             transition: transform 0.3s ease;
         }
 
-        /* Animasi Ripple Saat Diklik (Disesuaikan untuk tombol gelap) */
+        /* Animasi Ripple Saat Diklik */
         .ripple {
             position: absolute;
             border-radius: 50%;
@@ -105,7 +108,7 @@
         /* Elemen Background Floating */
         .bg-float-icon {
             position: absolute;
-            color: rgba(148, 163, 184, 0.15); 
+            color: rgba(255, 255, 255, 0.1); /* Diubah jadi putih transparan agar cocok dengan bg gelap */
             z-index: -1;
             pointer-events: none;
             animation: float-soft 12s infinite ease-in-out;
@@ -122,7 +125,7 @@
         }
     </style>
 </head>
-<body class="px-4 py-8 sm:p-10">
+<body class="px-4 py-8 sm:p-10 flex flex-col justify-between min-h-screen">
 
     <!-- Elemen Visual Background -->
     <i class="fa-solid fa-magnifying-glass bg-float-icon text-5xl top-[10%] left-[5%] delay-0"></i>
@@ -134,26 +137,30 @@
     <i class="fa-solid fa-circle-check bg-float-icon text-4xl top-[70%] right-[5%] delay-6"></i>
 
     <!-- Kontainer Utama -->
-    <main class="max-w-[900px] mx-auto flex flex-col items-center">
+    <main class="max-w-[900px] mx-auto flex flex-col items-center w-full flex-grow">
+
+        <!-- Logo Paling Atas -->
+        <div class="w-full flex justify-center mb-2 mt-2 animate-enter delay-0">
+            <img src="https://cdn.phototourl.com/member/2026-10-20-301bf8f0-f5cd-4de0-a3fd-b9b3a2d0e3e0.png" alt="Logo Informatika Fun" class="w-32 sm:w-44 h-auto object-contain drop-shadow-lg">
+        </div>
 
         <!-- Header -->
-        <header class="text-center mb-10 mt-4 w-full animate-enter delay-0">
-            <h2 class="text-base sm:text-lg font-bold text-slate-500 mb-1 tracking-widest uppercase">
+        <header class="text-center mb-10 w-full animate-enter delay-0">
+            <h2 class="text-base sm:text-lg font-bold text-gray-200 mb-1 tracking-widest uppercase">
                 Kelas VII – Bab II
             </h2>
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-[#1a2b4c] mb-3 leading-tight drop-shadow-sm">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-3 leading-tight drop-shadow-md">
                 LITERASI INFORMASI DAN PENCARIAN DIGITAL
             </h1>
-            </p>
         </header>
 
-        <!-- Kumpulan Tombol (Bento Vertikal) - Semua teks menjadi putih dengan background gelap -->
+        <!-- Kumpulan Tombol (Bento Vertikal) -->
         <div class="w-full flex flex-col gap-[16px]">
             
-            <!-- TOMBOL 1: Dark Blue -->
-            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan1" class="card-btn animate-enter delay-1 bg-gradient-to-r from-blue-600 to-blue-800 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
+            <!-- TOMBOL 1 -->
+            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan1" class="card-btn animate-enter delay-1 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
                 <div class="flex items-center gap-4 sm:gap-6 flex-grow">
-                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/20 text-white flex items-center justify-center text-2xl sm:text-3xl shadow-sm">
+                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 text-[#88D4AB] flex items-center justify-center text-2xl sm:text-3xl shadow-sm">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div class="flex-grow pr-2 sm:pr-4">
@@ -169,12 +176,12 @@
                 </div>
             </a>
 
-            <!-- TOMBOL 2: Dark Emerald/Green -->
-            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan2" class="card-btn animate-enter delay-2 bg-gradient-to-r from-emerald-600 to-emerald-800 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
+            <!-- TOMBOL 2 -->
+            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan2" class="card-btn animate-enter delay-2 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
                 <div class="flex items-center gap-4 sm:gap-6 flex-grow">
-                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/20 text-white flex items-center justify-center text-2xl sm:text-3xl shadow-sm relative">
+                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 text-[#88D4AB] flex items-center justify-center text-2xl sm:text-3xl shadow-sm relative">
                         <i class="fa-solid fa-search"></i>
-                        <i class="fa-solid fa-filter absolute text-sm bottom-3 right-2 bg-emerald-700 rounded-full px-1"></i>
+                        <i class="fa-solid fa-filter absolute text-sm bottom-3 right-2 bg-emerald-700/50 rounded-full px-1"></i>
                     </div>
                     <div class="flex-grow pr-2 sm:pr-4">
                         <h3 class="text-[15px] sm:text-[17px] font-semibold text-white text-justify-custom">
@@ -189,12 +196,12 @@
                 </div>
             </a>
 
-            <!-- TOMBOL 3: Dark Cyan -->
-            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan3" class="card-btn animate-enter delay-3 bg-gradient-to-r from-cyan-600 to-cyan-800 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
+            <!-- TOMBOL 3 -->
+            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan3" class="card-btn animate-enter delay-3 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
                 <div class="flex items-center gap-4 sm:gap-6 flex-grow">
-                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/20 text-white flex items-center justify-center text-2xl sm:text-3xl shadow-sm">
+                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 text-[#88D4AB] flex items-center justify-center text-2xl sm:text-3xl shadow-sm">
                         <i class="fa-regular fa-file-lines"></i>
-                        <i class="fa-solid fa-check absolute text-base bottom-3 right-3 text-cyan-200 font-extrabold drop-shadow"></i>
+                        <i class="fa-solid fa-check absolute text-base bottom-3 right-3 text-[#A3E4C2] font-extrabold drop-shadow"></i>
                     </div>
                     <div class="flex-grow pr-2 sm:pr-4">
                         <h3 class="text-[15px] sm:text-[17px] font-semibold text-white text-justify-custom">
@@ -209,12 +216,12 @@
                 </div>
             </a>
 
-            <!-- TOMBOL 4: Dark Indigo -->
-            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan4" class="card-btn animate-enter delay-4 bg-gradient-to-r from-indigo-600 to-indigo-800 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
+            <!-- TOMBOL 4 -->
+            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan4" class="card-btn animate-enter delay-4 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
                 <div class="flex items-center gap-4 sm:gap-6 flex-grow">
-                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/20 text-white flex items-center justify-center text-2xl sm:text-3xl shadow-sm relative">
+                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 text-[#88D4AB] flex items-center justify-center text-2xl sm:text-3xl shadow-sm relative">
                         <i class="fa-solid fa-shield-halved"></i>
-                        <i class="fa-solid fa-certificate text-xs absolute bottom-3 right-2 text-indigo-200"></i>
+                        <i class="fa-solid fa-certificate text-xs absolute bottom-3 right-2 text-[#A3E4C2]"></i>
                     </div>
                     <div class="flex-grow pr-2 sm:pr-4">
                         <h3 class="text-[15px] sm:text-[17px] font-semibold text-white text-justify-custom">
@@ -229,10 +236,10 @@
                 </div>
             </a>
 
-            <!-- TOMBOL 5: Dark Teal -->
-            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan5" class="card-btn animate-enter delay-5 bg-gradient-to-r from-teal-600 to-teal-800 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
+            <!-- TOMBOL 5 -->
+            <a href="https://riski902-alt.github.io/DASHBOARD-MATERI/index.html?id=kelas7-sem1-bab2-pertemuan5" class="card-btn animate-enter delay-5 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
                 <div class="flex items-center gap-4 sm:gap-6 flex-grow">
-                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/20 text-white flex items-center justify-center text-2xl sm:text-3xl shadow-sm relative">
+                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 text-[#88D4AB] flex items-center justify-center text-2xl sm:text-3xl shadow-sm relative">
                         <i class="fa-solid fa-magnifying-glass-chart"></i>
                     </div>
                     <div class="flex-grow pr-2 sm:pr-4">
@@ -248,12 +255,12 @@
                 </div>
             </a>
 
-            <!-- TOMBOL 6: GAMES (Dark Sky Blue) -->
-            <a href="LINK_GAMES" class="card-btn animate-enter delay-6 bg-gradient-to-r from-sky-600 to-blue-700 border-2 border-dashed border-sky-400 hover:border-sky-300 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
+            <!-- TOMBOL 6: GAMES -->
+            <a href="LINK_GAMES" class="card-btn animate-enter delay-6 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
                 <div class="flex items-center gap-4 sm:gap-6 flex-grow">
-                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/20 text-white flex items-center justify-center text-2xl sm:text-3xl shadow-sm relative">
+                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 text-[#88D4AB] flex items-center justify-center text-2xl sm:text-3xl shadow-sm relative">
                         <i class="fa-solid fa-gamepad"></i>
-                        <i class="fa-solid fa-magnifying-glass absolute text-sm -top-1 -right-1 text-emerald-300 drop-shadow-sm"></i>
+                        <i class="fa-solid fa-magnifying-glass absolute text-sm -top-1 -right-1 text-white drop-shadow-sm"></i>
                     </div>
                     <div class="flex-grow pr-2 sm:pr-4">
                         <h3 class="text-[15px] sm:text-[17px] font-bold text-white text-justify-custom tracking-wide">
@@ -268,10 +275,10 @@
                 </div>
             </a>
 
-            <!-- TOMBOL 7: ULANGAN BAB III (Dark Navy) -->
-            <a href="LINK_ULANGAN" class="card-btn animate-enter delay-7 bg-gradient-to-r from-[#1a2b4c] to-[#243b67] p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group shadow-md border-none">
+            <!-- TOMBOL 7: ULANGAN BAB III -->
+            <a href="LINK_ULANGAN" class="card-btn animate-enter delay-7 p-5 sm:p-6 w-full flex items-center justify-between cursor-pointer group">
                 <div class="flex items-center gap-4 sm:gap-6 flex-grow">
-                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 text-emerald-400 flex items-center justify-center text-2xl sm:text-3xl shadow-inner relative">
+                    <div class="main-icon flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white/10 text-[#88D4AB] flex items-center justify-center text-2xl sm:text-3xl shadow-inner relative">
                         <i class="fa-solid fa-clipboard-list"></i>
                         <i class="fa-solid fa-check absolute bottom-3 right-3 text-sm text-white"></i>
                     </div>
@@ -281,7 +288,7 @@
                         </h3>
                     </div>
                 </div>
-                <div class="hidden sm:flex flex-shrink-0 items-center gap-3 text-white/40 text-lg visual-small transition-all group-hover:text-emerald-300/80">
+                <div class="hidden sm:flex flex-shrink-0 items-center gap-3 text-white/40 text-lg visual-small transition-all group-hover:text-[#A3E4C2]/80">
                     <i class="fa-solid fa-pencil"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-trophy"></i>
@@ -290,6 +297,13 @@
 
         </div>
     </main>
+
+    <!-- FOOTER BARU -->
+    <footer class="w-full text-center py-6 mt-8">
+        <p class="text-[11px] sm:text-xs font-bold text-gray-300 opacity-80 tracking-wider">
+            INFORMATIKA FUN @ By: Riski Amalia, S.Pd
+        </p>
+    </footer>
 
     <!-- Script JavaScript Murni untuk Efek Ripple -->
     <script>
